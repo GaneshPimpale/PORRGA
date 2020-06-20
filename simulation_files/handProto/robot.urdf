@@ -1,0 +1,449 @@
+<robot name="onshape">
+<link name="tm_1">
+<visual>
+<origin xyz="0.0246086 0.007568 -0.0342799" rpy="1.38319e-06 -0.0122169 -2.36683e-06" />
+<geometry>
+<mesh filename="package://tm.stl"/>
+</geometry>
+<material name="tm_material">
+<color rgba="0.654902 0.584314 0.823529 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0246086 0.007568 -0.0342799" rpy="1.38319e-06 -0.0122169 -2.36683e-06" />
+<geometry>
+<mesh filename="package://tm.stl"/>
+</geometry>
+<material name="tm_material">
+<color rgba="0.654902 0.584314 0.823529 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.0198708 6.79805e-05 -0.0179422" rpy="0 0 0"/>
+<mass value="0.00743162" />
+<inertia ixx="1.1169e-06" ixy="2.26078e-13"  ixz="3.61592e-07" iyy="1.25662e-06" iyz="4.3606e-13" izz="4.06324e-07" />
+</inertial>
+</link>
+
+<link name="pf_1">
+<visual>
+<origin xyz="-0.000318428 0.0075 0.0699986" rpy="0 -0 5.42375e-22" />
+<geometry>
+<mesh filename="package://pf.stl"/>
+</geometry>
+<material name="pf_material">
+<color rgba="0.654902 0.823529 0.576471 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.000318428 0.0075 0.0699986" rpy="0 -0 5.42375e-22" />
+<geometry>
+<mesh filename="package://pf.stl"/>
+</geometry>
+<material name="pf_material">
+<color rgba="0.654902 0.823529 0.576471 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.0243225 0 0.0217188" rpy="0 0 0"/>
+<mass value="0.069665" />
+<inertia ixx="5.85582e-05" ixy="2.40943e-26"  ixz="4.32828e-06" iyy="7.05694e-05" iyz="-1.59918e-26" izz="1.48662e-05" />
+</inertial>
+</link>
+
+<link name="fb_1">
+<visual>
+<origin xyz="-8.67362e-19 0.0075 -6.93889e-18" rpy="-2.11758e-22 -3.46945e-18 1.22423e-22" />
+<geometry>
+<mesh filename="package://fb.stl"/>
+</geometry>
+<material name="fb_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-8.67362e-19 0.0075 -6.93889e-18" rpy="-2.11758e-22 -3.46945e-18 1.22423e-22" />
+<geometry>
+<mesh filename="package://fb.stl"/>
+</geometry>
+<material name="fb_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-1.06951e-18 8.67362e-19 0.0041003" rpy="0 0 0"/>
+<mass value="0.0024016" />
+<inertia ixx="1.17493e-07" ixy="8.0698e-32"  ixz="-2.35697e-25" iyy="9.2748e-08" iyz="-3.01344e-29" izz="4.95577e-08" />
+</inertial>
+</link>
+
+<link name="fs1_1">
+<visual>
+<origin xyz="-0.01 0.005 -0.005" rpy="0 3.46945e-18 5.42101e-20" />
+<geometry>
+<mesh filename="package://fs1.stl"/>
+</geometry>
+<material name="fs1_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.01 0.005 -0.005" rpy="0 3.46945e-18 5.42101e-20" />
+<geometry>
+<mesh filename="package://fs1.stl"/>
+</geometry>
+<material name="fs1_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.005 -8.67362e-19 0.01" rpy="0 0 0"/>
+<mass value="0.00176947" />
+<inertia ixx="1.04757e-07" ixy="3.95562e-28"  ixz="-1.29544e-25" iyy="1.12054e-07" iyz="0" izz="3.73386e-08" />
+</inertial>
+</link>
+
+<link name="fs2_1">
+<visual>
+<origin xyz="-0.0075023 0.005 -0.005" rpy="3.46945e-18 -3.46945e-18 -2.1684e-19" />
+<geometry>
+<mesh filename="package://fs2.stl"/>
+</geometry>
+<material name="fs2_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0075023 0.005 -0.005" rpy="3.46945e-18 -3.46945e-18 -2.1684e-19" />
+<geometry>
+<mesh filename="package://fs2.stl"/>
+</geometry>
+<material name="fs2_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.0050009 -3.46945e-18 0.01" rpy="0 0 0"/>
+<mass value="0.00226597" />
+<inertia ixx="1.5595e-07" ixy="-4.97426e-26"  ixz="9.39892e-26" iyy="1.51422e-07" iyz="-4.31362e-25" izz="2.70905e-08" />
+</inertial>
+</link>
+
+<link name="fs3_1">
+<visual>
+<origin xyz="-0.01 0.005 -0.005" rpy="-3.46945e-18 -0 0" />
+<geometry>
+<mesh filename="package://fs3.stl"/>
+</geometry>
+<material name="fs3_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.01 0.005 -0.005" rpy="-3.46945e-18 -0 0" />
+<geometry>
+<mesh filename="package://fs3.stl"/>
+</geometry>
+<material name="fs3_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.00500001 -0.000157297 0.0082427" rpy="0 0 0"/>
+<mass value="0.00157432" />
+<inertia ixx="6.31204e-08" ixy="1.04185e-13"  ixz="1.71575e-14" iyy="6.72718e-08" iyz="5.80147e-10" izz="2.72186e-08" />
+</inertial>
+</link>
+
+<joint name="MF-s3" type="revolute">
+<origin xyz="3.46945e-18 -1.56342e-16 0.02" rpy="0.000147265 -8.56953e-16 -2.03396e-16" />
+<parent link="fs2_1" />
+<child link="fs3_1" />
+<axis xyz="-1 0 0"/>
+<limit effort="1" velocity="20" lower="-1.5708" upper="0"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="MF-s2" type="revolute">
+<origin xyz="-3.64292e-17 -7.41594e-17 0.02" rpy="-0.00666581 -6.07153e-16 1.8567e-16" />
+<parent link="fs1_1" />
+<child link="fs2_1" />
+<axis xyz="1 0 1.38778e-16"/>
+<limit effort="1" velocity="20" lower="-0.0523599" upper="2.00713"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="MF-s1" type="revolute">
+<origin xyz="0.005 -5.32614e-18 0.0122723" rpy="-0.0208657 -0 -3.64635e-17" />
+<parent link="fb_1" />
+<child link="fs1_1" />
+<axis xyz="1 0 1.73472e-16"/>
+<limit effort="1" velocity="20" lower="-0.0523599" upper="1.67552"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="MF" type="revolute">
+<origin xyz="-0.0223184 1.17907e-18 0.0769986" rpy="-7.5268e-18 -0.0188445 3.98037e-18" />
+<parent link="pf_1" />
+<child link="fb_1" />
+<axis xyz="0 1 0"/>
+<limit effort="1" velocity="20" lower="-0.453786" upper="0.418879"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="fb_2">
+<visual>
+<origin xyz="0 0.0075 0" rpy="0 -0 1.10842e-22" />
+<geometry>
+<mesh filename="package://fb.stl"/>
+</geometry>
+<material name="fb_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0.0075 0" rpy="0 -0 1.10842e-22" />
+<geometry>
+<mesh filename="package://fb.stl"/>
+</geometry>
+<material name="fb_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-1.87924e-19 1.73472e-18 0.0041003" rpy="0 0 0"/>
+<mass value="0.0024016" />
+<inertia ixx="1.17493e-07" ixy="4.85723e-29"  ixz="2.17696e-51" iyy="9.2748e-08" iyz="1.96401e-29" izz="4.95577e-08" />
+</inertial>
+</link>
+
+<link name="fs1_2">
+<visual>
+<origin xyz="-0.01 0.005 -0.005" rpy="-4.33681e-19 -0 3.38813e-21" />
+<geometry>
+<mesh filename="package://fs1.stl"/>
+</geometry>
+<material name="fs1_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.01 0.005 -0.005" rpy="-4.33681e-19 -0 3.38813e-21" />
+<geometry>
+<mesh filename="package://fs1.stl"/>
+</geometry>
+<material name="fs1_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.005 0 0.01" rpy="0 0 0"/>
+<mass value="0.00176947" />
+<inertia ixx="1.04757e-07" ixy="3.79654e-28"  ixz="0" iyy="1.12054e-07" iyz="-1.6193e-26" izz="3.73386e-08" />
+</inertial>
+</link>
+
+<link name="fs2_2">
+<visual>
+<origin xyz="-0.0075023 0.005 -0.005" rpy="-6.93889e-18 -0 2.71051e-20" />
+<geometry>
+<mesh filename="package://fs2.stl"/>
+</geometry>
+<material name="fs2_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0075023 0.005 -0.005" rpy="-6.93889e-18 -0 2.71051e-20" />
+<geometry>
+<mesh filename="package://fs2.stl"/>
+</geometry>
+<material name="fs2_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.0050009 -4.33681e-18 0.01" rpy="0 0 0"/>
+<mass value="0.00226597" />
+<inertia ixx="1.5595e-07" ixy="1.67854e-26"  ixz="-2.70531e-25" iyy="1.51422e-07" iyz="-1.23868e-24" izz="2.70905e-08" />
+</inertial>
+</link>
+
+<link name="fs3_2">
+<visual>
+<origin xyz="-0.01 0.005 -0.005" rpy="0 8.67362e-19 0" />
+<geometry>
+<mesh filename="package://fs3.stl"/>
+</geometry>
+<material name="fs3_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.01 0.005 -0.005" rpy="0 8.67362e-19 0" />
+<geometry>
+<mesh filename="package://fs3.stl"/>
+</geometry>
+<material name="fs3_material">
+<color rgba="0.882353 0.572549 0.478431 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.00500001 -0.000157297 0.0082427" rpy="0 0 0"/>
+<mass value="0.00157432" />
+<inertia ixx="6.31204e-08" ixy="1.04185e-13"  ixz="1.71575e-14" iyy="6.72718e-08" iyz="5.80147e-10" izz="2.72186e-08" />
+</inertial>
+</link>
+
+<joint name="FF-s3" type="revolute">
+<origin xyz="8.32667e-17 4.57967e-16 0.02" rpy="2.42648e-07 -6.33174e-17 1.39252e-16" />
+<parent link="fs2_2" />
+<child link="fs3_2" />
+<axis xyz="1 0 0"/>
+<limit effort="1" velocity="20" lower="0" upper="1.5708"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="FF-s2" type="revolute">
+<origin xyz="-2.25514e-16 -1.56518e-16 0.02" rpy="-0.017089 3.46945e-18 1.05757e-16" />
+<parent link="fs1_2" />
+<child link="fs2_2" />
+<axis xyz="1 0 1.38778e-16"/>
+<limit effort="1" velocity="20" lower="-0.0523599" upper="2.00713"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="FF-s1" type="revolute">
+<origin xyz="0.005 -2.1413e-17 0.0122723" rpy="-0.00366721 1.56125e-17 1.05157e-16" />
+<parent link="fb_2" />
+<child link="fs1_2" />
+<axis xyz="1 0 1.73472e-16"/>
+<limit effort="1" velocity="20" lower="-0.0523599" upper="1.67552"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="FF" type="revolute">
+<origin xyz="-0.00931843 -5.42101e-20 0.0669986" rpy="-1.99056e-20 0.00570727 6.26597e-18" />
+<parent link="pf_1" />
+<child link="fb_2" />
+<axis xyz="0 1 0"/>
+<limit effort="1" velocity="20" lower="-0.0523599" upper="0.401426"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="TM" type="revolute">
+<origin xyz="0.0246086 6.79987e-05 -0.0342799" rpy="1.38309e-06 3.80348e-07 -2.34993e-06" />
+<parent link="tm_1" />
+<child link="pf_1" />
+<axis xyz="0 1 0"/>
+<limit effort="1" velocity="20" lower="-0.314159" upper="0.0122173"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="tb_1">
+<visual>
+<origin xyz="-0.005 0 -0.00745" rpy="0 8.67362e-19 1.30104e-18" />
+<geometry>
+<mesh filename="package://tb.stl"/>
+</geometry>
+<material name="tb_material">
+<color rgba="0.960784 0.835294 0.470588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.005 0 -0.00745" rpy="0 8.67362e-19 1.30104e-18" />
+<geometry>
+<mesh filename="package://tb.stl"/>
+</geometry>
+<material name="tb_material">
+<color rgba="0.960784 0.835294 0.470588 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0 -0.0077374 0.00443882" rpy="0 0 0"/>
+<mass value="0.00294988" />
+<inertia ixx="1.758e-07" ixy="1.99494e-25"  ixz="1.49152e-25" iyy="1.55298e-07" iyz="4.68967e-08" izz="7.41847e-08" />
+</inertial>
+</link>
+
+<link name="ts1_1">
+<visual>
+<origin xyz="-0.01 0.005 -0.005" rpy="1.0842e-19 2.1684e-19 -5.76406e-19" />
+<geometry>
+<mesh filename="package://ts1.stl"/>
+</geometry>
+<material name="ts1_material">
+<color rgba="0.960784 0.835294 0.470588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.01 0.005 -0.005" rpy="1.0842e-19 2.1684e-19 -5.76406e-19" />
+<geometry>
+<mesh filename="package://ts1.stl"/>
+</geometry>
+<material name="ts1_material">
+<color rgba="0.960784 0.835294 0.470588 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.005 -8.67362e-19 0.00998362" rpy="0 0 0"/>
+<mass value="0.00174087" />
+<inertia ixx="9.77098e-08" ixy="-2.72186e-26"  ixz="3.63051e-26" iyy="9.87324e-08" iyz="-7.6697e-27" izz="2.79919e-08" />
+</inertial>
+</link>
+
+<link name="ts2_1">
+<visual>
+<origin xyz="-0.01 0.005 -0.005" rpy="6.93889e-18 -0 2.04304e-18" />
+<geometry>
+<mesh filename="package://ts2.stl"/>
+</geometry>
+<material name="ts2_material">
+<color rgba="0.960784 0.835294 0.470588 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.01 0.005 -0.005" rpy="6.93889e-18 -0 2.04304e-18" />
+<geometry>
+<mesh filename="package://ts2.stl"/>
+</geometry>
+<material name="ts2_material">
+<color rgba="0.960784 0.835294 0.470588 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.00500002 -0.000270313 0.0109029" rpy="0 0 0"/>
+<mass value="0.00212373" />
+<inertia ixx="1.14077e-07" ixy="1.86767e-13"  ixz="1.60604e-14" iyy="1.19138e-07" iyz="1.84351e-09" izz="3.54666e-08" />
+</inertial>
+</link>
+
+<joint name="T-s2" type="revolute">
+<origin xyz="-6.93889e-18 -1.19262e-18 0.0175" rpy="0.0153751 -2.25514e-16 -7.35563e-18" />
+<parent link="ts1_1" />
+<child link="ts2_1" />
+<axis xyz="1 0 0"/>
+<limit effort="1" velocity="20" lower="-0.349066" upper="1.65806"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="T-s1" type="revolute">
+<origin xyz="6.17995e-18 -0.0165433 0.0129954" rpy="-0.00568386 0.226893 -1.5708" />
+<parent link="tb_1" />
+<child link="ts1_1" />
+<axis xyz="-1 0 0"/>
+<limit effort="1" velocity="20" lower="-1.0472" upper="0.523599"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="TB" type="revolute">
+<origin xyz="0.0245414 6.79683e-05 -0.012125" rpy="-0.225481 -0.00643272 1.54276" />
+<parent link="tm_1" />
+<child link="tb_1" />
+<axis xyz="0 0 -1"/>
+<limit effort="1" velocity="20" lower="3.21141" upper="6.10865"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+
+</robot>

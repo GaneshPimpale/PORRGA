@@ -1,0 +1,13 @@
+{
+  // API access keys (DO NOT DISTRIBUTE):
+  "onshape_api": "https://cad.onshape.com",
+  "onshape_access_key": "O0stDE16kisSlA2Ib52lBxxh",
+  "onshape_secret_key": "Zaf4d5DmbiebLpUEgaSGlpoNHeh9v6BaIH5mY2YxN0mw16xi",
+
+  "documentId": "b7bbade8d2ed921a4da5de98",
+  "outputFormat":"urdf",
+  "assemblyName":"hand-no-limits",
+  "maxSTLSize":20
+}
+
+

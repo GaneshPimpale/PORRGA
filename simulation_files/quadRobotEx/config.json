@@ -1,0 +1,14 @@
+ 
+{
+    // API access keys (DO NOT DISTRIBUTE):
+    "onshape_api": "https://cad.onshape.com",
+    "onshape_access_key": "O0stDE16kisSlA2Ib52lBxxh",
+    "onshape_secret_key": "Zaf4d5DmbiebLpUEgaSGlpoNHeh9v6BaIH5mY2YxN0mw16xi",
+
+    "documentId": "a96598ba4aadd39addcc0872",
+    "outputFormat": "urdf",
+    "drawFrames": false,
+    "drawCollisions": false,
+    "useScads": true,
+    "mergeSTLs": true
+}
