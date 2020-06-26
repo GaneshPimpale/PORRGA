@@ -11,14 +11,14 @@ import argparse
 
 # Argument parse
 parser = argparse.ArgumentParser()
-parser.add_argument("--video")
 parser.add_argument("--prototxt", default="MobileNetSSD_deploy.prototxt")
 parser.add_argument("--model", default="MobileNetSSD_deploy.caffemodel")
 parser.add_argument("--confidence", default=0.2, type=float)
 args = vars(parser.parse_args())
 
 # Initialize classes list and generate bounding box colors
-CLASSES = ["background", "person", "phone"]
+CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow",
+           "diningtable","dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"]
 COLORS = np.random.uniform(0, 255, size=(len(CLASSES)))
 
 # Load model
