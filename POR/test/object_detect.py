@@ -10,18 +10,22 @@ import argparse
 
 
 # Argument parse
-ap = argparse.ArgumentParser()
-args = vars(ap.parse_args())
+parser = argparse.ArgumentParser()
+parser.add_argument("--video")
+parser.add_argument("--prototxt", default="MobileNetSSD_deploy.prototxt")
+parser.add_argument("--model", default="MobileNetSSD_deploy.caffemodel")
+parser.add_argument("--confidence", default=0.2, type=float)
+args = vars(parser.parse_args())
 
 # Initialize classes list and generate bounding box colors
-CLASSES = ["person", "phone"]
-COLORS = np.random.uniform(0, 255, size = (len(CLASSES)))
+CLASSES = ["background", "person", "phone"]
+COLORS = np.random.uniform(0, 255, size=(len(CLASSES)))
 
 # Load model
 network = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
 
-# Start video srtream and FPS counter
-vs = VideoStream(src = 0).start()
+# Start video stream and FPS counter
+vs = VideoStream(src=0).start()
 fps = FPS().start()
 
 # Main loop
@@ -35,9 +39,8 @@ while cv2.waitKey(1) & 0xFF != ord("q"):
     network.setInput(blob)
     detections = network.forward()
 
-    for i in np.arrange(0, detections.shape[2]):
+    for i in np.arange(0, detections.shape[2]):
         confid = detections[0, 0, 1, 2]
-
         if confid > args["confidence"]:
             # Find X, Y coordinates of the detections
             index = int(detections[0, 0, i, 1])
@@ -45,9 +48,9 @@ while cv2.waitKey(1) & 0xFF != ord("q"):
             (startX, startY, endX, endY) = box.astype("int")
 
             # Add the prediction on the frame
-            label = "{}: {:.2f}%".format(CLASSES[index], confid*100)
+            label = CLASSES[index] + ": " + str(confid*100)
             cv2.rectangle(frame, (startX, startY), (endX, endY), COLORS[index], 2)
-            y = startY -15 if startY -15 > 15 else startY + 15
+            y = startY-15 if startY-15 > 15 else startY + 15
             cv2.putText(frame, label, (startX, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[index], 2)
 
     # Show output and update FPS
@@ -58,5 +61,4 @@ while cv2.waitKey(1) & 0xFF != ord("q"):
 fps.stop()
 cv2.destroyAllWindows()
 vs.stop()
-
 
