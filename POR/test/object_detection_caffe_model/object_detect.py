@@ -25,7 +25,7 @@ COLORS = np.random.uniform(0, 255, size=(len(CLASSES)))
 network = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
 
 # Start video stream and FPS counter
-vs = VideoStream(src=0).start()
+vs = VideoStream(src=1).start()
 fps = FPS().start()
 
 # Main loop
