@@ -1,20 +1,20 @@
 # import packages: SolidPython
 from solid import *
 from solid.utils import *
-from random import randint
+from itertools import chain, combinations
 
 
 class Resize:
 
     def __init__(self, ):
-        # cone/cylinder parameters
+        # cone/cylinder param:
         self.r1 = 0
         self.r2 = 0
         self.h = 0
-        # rectangular prism parameters (height declared above)
+        # rectangular prism param:
         self.w = 0
         self.l = 0
-        # ellipse parameters (height declared above)
+        # ellipse param:
         self.r = 0
 
     # import OpenScad code (file name corresponds to shape)
@@ -23,34 +23,55 @@ class Resize:
     # classify shape + parameters
     def assign(self, scad_file, param1, param2, param3):
         if scad_file == 'cone.scad':
-            self.param1 = r1
-            self.param2 = r2
-            self.param3 = h
+            self.r1 = self.param1
+            self.r2 = self.param2
+            self.h = self.param3
         elif scad_file == 'cylinder.scad':
-            self.param1 = r1
-            self.param2 = r2
-            self.param3 = h
+            self.r1 = self.param1
+            self.r2 = self.param2
+            self.h = self.param3
         elif scad_file == 'rectangularPrism.scad':
-            self.param1 = h
-            self.param2 = l
-            self.param3 = w
+            self.h = self.param1
+            self.l = self.param2
+            self.w = self.param3
         else:
-            self.param1 = r
-            self.param2 = h
+            self.r = self.param1
+            self.h = self.param2
 
     # resize parameters
-    def inrate(self):
+    def iterate(self):
+        x = range(3, 20, 2)
+        i = 1
         if scad_file == 'cone':
-            intertools.combinations(range(11), 3)
-            # need to set param values
+            list = intertools.combinations(x, 3)
+            for i in range(0, len(list)):
+                param1 = list[0:i:0]
+                param2 = list[0:i:1]
+                param3 = list[0:i:2]
+                scad = scad_file.cylinder(param1, param2, param3)
+
         elif scad_file == 'cylinder':
-            intertools.combinations(range(11), 3)
+            list = intertools.combinations(x, 3)
+            for i in range(0, len(list)):
+                param1 = list[0:i:0]
+                param2 = list[0:i:1]
+                param3 = list[0:i:2]
+                scad = scad_file.cylinder(param1, param2, param3)
 
         elif scad_file == 'rectangularPrism.scad':
-            intertools.combinations(range(11), 3)
+            list = intertools.combinations(x, 3)
+            for i in range(0, len(list)):
+                param1 = list[0:i:0]
+                param2 = list[0:i:1]
+                param3 = list[0:i:2]
+                scad = scad_file.box(param1, param2, param3)
 
         else:
-            intertools.combinations(range(11), 2)
+            list = intertools.combinations(x, 2)
+            for i in range(0, len(list)):
+                param1 = list[0:i:0]
+                param2 = list[0:i:1]
+                scad = scad_file.ellipse(param1, param2)
 
-    # render to file (STL/scad)
-    scad_render_to_file(scad, 'example.scad')
+    def render_to_scadfile:
+        scad_render_to_file(scad, 'example.scad')
