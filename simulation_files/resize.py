@@ -74,5 +74,5 @@ class Resize:
                 param2 = list[0:i:1]
                 scad = self.scad_file.ellipse(param1, param2)
 
-    def render_to_scadfile:
+    def render_to_scadfile(self):
         scad_render_to_file(scad, 'example.scad')
