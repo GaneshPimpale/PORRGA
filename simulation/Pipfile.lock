@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c2179461a93d71e0be6d93a9a9417cef520f80d295aa44c57ed952ddaf830c17"
+            "sha256": "908c7de26eedaa147a92ef5601d7866cafbc29f98635338550da923724687dd7"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -29,6 +29,20 @@
                 "sha256:a53da3b43d7a5c229b5e3ca2892ef982c46b7923b51e98f0db49956531211c4f"
             ],
             "version": "==0.7.2"
+        },
+        "pybullet": {
+            "hashes": [
+                "sha256:1a3287f7b693a654ea1ae106da2c55b11dee5be9afbbcb0e61a8efc4fc46b710",
+                "sha256:2e472ee4d6ed198e0561a0c23e1d2f9976fbe1df299ac173ebe1bc368c1c4529",
+                "sha256:39fb2ae8ef99c7096295a368e232224b68bf209059c1977d7189c28ec833d043",
+                "sha256:67074f060152f4d56720ce85aafe8fa7c099cdcbb72dfc3bce6920e57d7d7556",
+                "sha256:9fa800929c0248001fbf866aab2f897b00bd2062394b808432cf9ba40a6ce2b0",
+                "sha256:b1645a642034226182479753113fac1c72aba2d6913641bbe902cf8b5591298a",
+                "sha256:c4d2387f4f9ec16768999d1cc40dd2cd6066e01fdf84d209609ef70888e38e1c",
+                "sha256:d9ce5eff81a70195e4d2eda43e37f64b915734d8e3249638f7a50f8fa69634ea"
+            ],
+            "index": "pypi",
+            "version": "==2.8.4"
         },
         "pypng": {
             "hashes": [
