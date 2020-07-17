@@ -7,18 +7,30 @@ from pyodm import Node
 
 class Por:
 
-    def __init__(self):
-        self.mesh_file
+    """ Get input values and files
+    :param image_list: list of image files
+    """
+    def __init__(self, image_list):
+        self.image_list = image_list
 
-    def create_mesh(self, image):
+    """ Uses PyODM to generate a 3D mesh from multiple images """
+    def create_mesh(self):
         return -1
 
-    def voxelize(self):
+    """ Turns mesh into voxels """
+    def voxelize(self, ):
         return -1
 
-    def segment_voxel(self):
-        return -1
-
+    """ Classify voxel group """
     def classify(self):
         return -1
+
+    """ Perform initial position based segmentation """
+    def pre_segment_voxel(self):
+        return -1
+
+
+
+
+
 
