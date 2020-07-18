@@ -1,3 +1,4 @@
+import os
 import numpy as np
 from PIL import Image
 from matplotlib import pyplot as plt
@@ -13,6 +14,8 @@ from model import Deeplabv3
 trained_image_width=512
 mean_subtraction_value=127.5
 image = np.array(Image.open('test.jpg'))
+
+#get the YOLOv3 bounding boxes, labels and confidences
 bbox, YOLO_label, conf = cv.detect_common_objects(image)
 
 # resize to max dimension of images from training dataset
@@ -38,10 +41,19 @@ if pad_x > 0:
     labels = labels[:-pad_x]
 if pad_y > 0:
     labels = labels[:, :-pad_y]
-labels = np.array(Image.fromarray(labels.astype('uint8')).resize((h, w)))
+labels = Image.fromarray(labels.astype('uint8')).resize((h, w)).convert()
 #print(labels)
-output = draw_bbox(img=labels, bbox=bbox, labels=YOLO_label, confidence=conf)
 
-plt.imshow(output)
+#this is a really stupid way to get the PIL image to work with OpenCV but it works
+plt.imsave('./temp_image_this_is_so_dumb.png', labels)
+img = cv2.imread('temp_image_this_is_so_dumb.png')
+#display the YOLOv3 bounding boxes and labels
+img = draw_bbox(img=img, bbox=bbox, labels=YOLO_label, confidence=conf)
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+
+plt.imshow(img)
+
 plt.waitforbuttonpress()
 plt.show()
+os.remove('temp_image_this_is_so_dumb.png')
