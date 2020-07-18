@@ -42,11 +42,17 @@ if pad_x > 0:
 if pad_y > 0:
     labels = labels[:, :-pad_y]
 labels = Image.fromarray(labels.astype('uint8')).resize((h, w)).convert()
-#print(labels)
+
+
+
 
 #this is a really stupid way to get the PIL image to work with OpenCV but it works
 plt.imsave('./temp_image_this_is_so_dumb.png', labels)
-img = cv2.imread('temp_image_this_is_so_dumb.png')
+background = Image.open('test.jpg').convert('RGBA')
+segments = Image.open('temp_image_this_is_so_dumb.png')
+overlay = Image.blend(background, segments, 0.5)
+img = np.array(overlay)
+#img = cv2.imread('temp_image_this_is_so_dumb.png')
 #display the YOLOv3 bounding boxes and labels
 img = draw_bbox(img=img, bbox=bbox, labels=YOLO_label, confidence=conf)
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
