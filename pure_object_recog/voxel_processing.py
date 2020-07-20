@@ -1,6 +1,10 @@
 import os
+import shutil
+import sys
+
 import numpy as np
 import matplotlib.pyplot as plt
+
 from pyntcloud import PyntCloud
 import binvox
 
