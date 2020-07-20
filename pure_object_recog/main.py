@@ -1,5 +1,19 @@
-from pure_object_recogn import Por
-from parameter_recog import Popr
+from pure_object_recog.pure_object import Por
+from pure_object_recog.parameter import Popr
+from pyodm import Node
+import cv2
+
+
+por = Por()
+# Collect photo data
+# TODO: make sure cam_list is up to date
+cam_list = [0, 1, 2, 3]
+por.camera_input(cam_list)
+
+# Create node connection
+nd = Node("localhost", 3000)
+por.create_mesh(nd)
+
 
 
 
