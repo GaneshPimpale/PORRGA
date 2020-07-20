@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'ff-base', 'ff-s1', 'ff-s2', 'ff-s3', 'mf-base', 'mf-s1', 'mf-s2', 'mf-s3', 'rf-pf-mount', 'rf-base', 'rf-s1', 'rf-s2', 'rf-s3', 'pf-base', 'pf-s1', 'pf-s2', 'pf-s3', 't-mount', 't-base', 't-s1', 't-s2', ]
