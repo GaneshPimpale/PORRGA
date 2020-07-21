@@ -13,7 +13,7 @@ class Por:
 
     def __init__(self):
         # Create global variables
-        self.temp_path = os.path.realpath("/temp") + "/run"
+        self.temp_path = os.path.realpath("temp") + "/run"
         self.image_list = []
         self.mesh_file
 
