@@ -6,6 +6,7 @@ import cv2
 import numpy as np
 
 from pyntcloud import PyntCloud
+import pyvista as pv
 from pyodm import Node
 
 
@@ -48,7 +49,7 @@ class Por:
         self.image_list = img_list
         print("Wrote images to list")
 
-    """ Uses PyODM to generate a 3D mesh from multiple images 
+    """ Uses PyODM to generate a 3D mesh from multiple images
     :param node_connection: Node connection to the ODM server
     """
     def create_mesh(self, node_connection):
@@ -59,8 +60,9 @@ class Por:
         os.listdir(task.download_assets(self.odm_path))
 
     """ Turns mesh into voxel numpy array """
-    def voxelize(self, ):
-        return -1
+    def voxelize(self):
+        # TODO: set file path
+        cloud = PyntCloud.from_file()
 
     """ Classify voxel group """
     def classify(self):

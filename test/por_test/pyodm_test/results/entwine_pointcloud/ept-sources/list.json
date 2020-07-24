@@ -1,0 +1,18 @@
+[
+  {
+    "bounds": [
+      -1.1878139972686768,
+      -0.9775984883308411,
+      -2.3885364532470703,
+      1.1052472591400146,
+      0.8454287052154541,
+      -1.5021889209747314
+    ],
+    "id": "odm_georeferenced_model.laz",
+    "inserts": 17090,
+    "path": "odm_georeferencing/odm_georeferenced_model.laz",
+    "points": 17090,
+    "status": "inserted",
+    "url": "0.json"
+  }
+]
