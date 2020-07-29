@@ -2,7 +2,7 @@ import pybullet as p
 import pandas as pd
 
 
-class getTorque:
+class getJointValues:
     def __init__(self, id):
         numJoints = p.getNumJoints(id)
         dict = {}
