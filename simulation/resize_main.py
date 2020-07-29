@@ -1,6 +1,9 @@
 import resize
 
-test = resize.Resize('cone.scad')
-test.iterate()
-test.assign
-print(test.scad_file)
+
+files = ['cone.scad', 'cylinder.scad', 'ellipse.scad', 'rectangularPrism.scad']
+for file in files:
+    test = resize.Resize(file)
+    test.iterate()
+    test.assign
+    print(test.scad_file)
