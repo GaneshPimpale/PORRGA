@@ -1,0 +1,1 @@
+color("CornflowerBlue")cylinder($fn = 30, $fa = 1, $fs = 1, h = 5, r1 = 2.5, r2 = 2.5, center = true);
