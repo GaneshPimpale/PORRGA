@@ -9,6 +9,8 @@ from pyntcloud import PyntCloud
 import pyvista as pv
 from pyodm import Node
 
+from pure_object_recog.voxel import Voxel
+
 
 class Por:
 
@@ -20,7 +22,9 @@ class Por:
 
         # Create temp file directory
         self.image_path = self.temp_path + "/images"
-        self.odm_path = self.temp_path + "/odm_results"
+        self.odm_path = self.temp_path + "/results"
+        # Todo: set path to .ply file in the ODM results
+        self.ply_path = self.odm_path + "/odm_mesh"
 
     """ Get pic from each camera in list
     :param cam_list: list of camera input ints
@@ -59,14 +63,9 @@ class Por:
         task.wait_for_completion()
         os.listdir(task.download_assets(self.odm_path))
 
-    """ Turns mesh into voxel numpy array """
-    def voxelize(self):
-        # TODO: set file path
-        cloud = PyntCloud.from_file()
-
     """ Classify voxel group """
     def classify(self):
-        return -1
+        Voxel.get_voxel(self.ply_path)
 
     """ Perform initial position based segmentation """
     def pre_segment_voxel(self):

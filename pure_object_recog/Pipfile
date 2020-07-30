@@ -13,6 +13,7 @@ opencv-python = "*"
 pyvista = "*"
 pyodm = "*"
 urllib3 = "==1.24.1"
+pymeshfix = "*"
 
 [requires]
 python_version = "3.8"
