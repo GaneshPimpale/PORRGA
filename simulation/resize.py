@@ -27,7 +27,7 @@ class Resize:
         self.total_len = len(self.list_two) + len(self.list_three) + len(self.list_four)
 
 
-    # import OpenScad code (file name corresponds to shape)
+
 
 
     # classify shape + parameters
@@ -50,19 +50,19 @@ class Resize:
 
     # resize parameters
     def iterate(self):
-        if self.scad_file == 'cone.scad':
+        if self.scad_file == 'cone.scad' and self.counter < len(self.list_two):
             current_permutation = self.list_two[self.counter]
             scad_render_to_file(cylinder(h=current_permutation[0], r1=current_permutation[1], r2=0), 'current_stl.stl')
             self.counter+=1
-        elif self.scad_file == 'cylinder.scad':
+        elif self.scad_file == 'cylinder.scad' and self.counter < len(self.list_two):
             current_permutation = self.list_two[self.counter]
             scad_render_to_file(cylinder(h=current_permutation[0], r1=current_permutation[1], r2=current_permutation[1]), 'current_stl.stl')
             self.counter += 1
-        elif self.scad_file == 'rectangularPrism.scad':
+        elif self.scad_file == 'rectangularPrism.scad' and self.counter < len(self.list_three):
             current_permutation = self.list_three[self.counter]
             scad_render_to_file(cube(size=(current_permutation[0], current_permutation[1], current_permutation[2])), 'current_stl.stl')
             self.counter += 1
-        elif self.scad_file == 'ellipse.scad':
+        elif self.scad_file == 'ellipse.scad' and self.counter < len(self.list_four):
             current_permutation = self.list_three[self.counter]
             scad_render_to_file(scale([current_permutation[0], current_permutation[1], current_permutation[2]])(sphere(r=current_permutation[3])), 'current_stl.stl')
             self.counter += 1
