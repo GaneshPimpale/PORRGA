@@ -18,7 +18,7 @@ class Por:
         # Create global variables
         self.temp_path = os.path.realpath("temp") + "/run"
         self.image_list = []
-        self.mesh_file
+        self.mesh_file = ""
 
         # Create temp file directory
         self.image_path = self.temp_path + "/images"

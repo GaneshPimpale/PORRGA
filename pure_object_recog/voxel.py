@@ -7,13 +7,14 @@ import matplotlib.pyplot as plt
 
 from pyntcloud import PyntCloud
 import pyvista as pv
+
 import binvox
 
 
 class Voxel:
 
     def __init__(self):
-        self.voxel_file_path = "temp"
+        self.voxel_file_path = ""
 
     """ Get pic from each camera in list
     :param path: Path to .ply file
