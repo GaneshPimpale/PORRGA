@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Hand-Assem-By-Part-URDF.SLDASM">
+  <link
+    name="palm">
+    <inertial>
+      <origin
+        xyz="0.0205030660745504 0.0541706125316092 0.109712764567336"
+        rpy="0 0 0" />
+      <mass
+        value="0.0557319590388206" />
+      <inertia
+        ixx="5.64555016716926E-05"
+        ixy="-4.48648696513966E-20"
+        ixz="-1.34034792654271E-19"
+        iyy="1.18929852629606E-05"
+        iyz="-3.46262361865482E-06"
+        izz="4.68465572915269E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/palm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 1 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/palm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="ff">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 -0.00750000000000015 -0.00410030127828349"
+        rpy="0 0 0" />
+      <mass
+        value="0.00192127930221582" />
+      <inertia
+        ixx="9.39940947687055E-08"
+        ixy="-7.53054638477379E-23"
+        ixz="1.72926647655636E-22"
+        iyy="7.41983872586434E-08"
+        iyz="-1.01061913610577E-24"
+        izz="3.96461361618716E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/ff.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/ff.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ff-base"
+    type="continuous">
+    <origin
+      xyz="0.013003 -0.094709 0.09945"
+      rpy="-3.1416 0 -1.5708" />
+    <parent
+      link="palm" />
+    <child
+      link="ff" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="ff-s1">
+    <inertial>
+      <origin
+        xyz="7.07767178198537E-16 7.11236625150491E-16 -0.0100000000000005"
+        rpy="0 0 0" />
+      <mass
+        value="0.00141557768550297" />
+      <inertia
+        ixx="8.38059118781398E-08"
+        ixy="6.15326845318188E-25"
+        ixz="1.81647377381412E-22"
+        iyy="8.96433788186838E-08"
+        iyz="-4.57543056219547E-22"
+        izz="2.98708462926757E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/ff-s1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/ff-s1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ff-s1"
+    type="continuous">
+    <origin
+      xyz="0 -0.00750000000000014 -0.0122722944655069"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="ff" />
+    <child
+      link="ff-s1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="ff-s2">
+    <inertial>
+      <origin
+        xyz="-8.99426584904939E-07 -6.24500451351651E-17 -0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.00181277282792487" />
+      <inertia
+        ixx="1.24760361831459E-07"
+        ixy="1.57233847913635E-24"
+        ixz="3.59384736901931E-22"
+        iyy="1.21137686552032E-07"
+        iyz="-6.2190806297965E-22"
+        izz="2.16724299242668E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/ff-s2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/ff-s2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ff-s2"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0200000000000004"
+      rpy="0 0 0" />
+    <parent
+      link="ff-s1" />
+    <child
+      link="ff-s2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="ff-s3">
+    <inertial>
+      <origin
+        xyz="-7.38421858381688E-08 0.000163857846701972 -0.00823936350944077"
+        rpy="0 0 0" />
+      <mass
+        value="0.00125733648922937" />
+      <inertia
+        ixx="5.04557790777882E-08"
+        ixy="-3.19441837775366E-13"
+        ixz="-2.40414573247444E-13"
+        iyy="5.37916659519628E-08"
+        iyz="4.80442439733466E-10"
+        izz="2.17253936875594E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/ff-s3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/ff-s3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ff-s3"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.02"
+      rpy="0 0 0" />
+    <parent
+      link="ff-s2" />
+    <child
+      link="ff-s3" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="mf">
+    <inertial>
+      <origin
+        xyz="2.4980018054066E-16 -0.0075 0.00410030127828347"
+        rpy="0 0 0" />
+      <mass
+        value="0.00192127930221582" />
+      <inertia
+        ixx="9.39940947687055E-08"
+        ixy="2.70603619100207E-24"
+        ixz="-3.4057352264281E-21"
+        iyy="7.41983872586434E-08"
+        iyz="-4.24049389304335E-24"
+        izz="3.96461361618716E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/mf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/mf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf-base"
+    type="continuous">
+    <origin
+      xyz="0.013003 -0.10771 0.10945"
+      rpy="0 0.0027726 1.5708" />
+    <parent
+      link="palm" />
+    <child
+      link="mf" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="mf-s1">
+    <inertial>
+      <origin
+        xyz="2.63677968348475E-16 0 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.00141557768550297" />
+      <inertia
+        ixx="8.38059118781396E-08"
+        ixy="-2.53517594074341E-24"
+        ixz="-1.21780373213412E-21"
+        iyy="8.96433788186836E-08"
+        iyz="2.96477726583667E-23"
+        izz="2.98708462926757E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/mf-s1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/mf-s1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf-s1"
+    type="continuous">
+    <origin
+      xyz="0 -0.00749999999999997 0.0122722944655068"
+      rpy="0 0 0" />
+    <parent
+      link="mf" />
+    <child
+      link="mf-s1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="mf-s2">
+    <inertial>
+      <origin
+        xyz="-8.99426585390661E-07 6.93889390390723E-18 0.00999999999999998"
+        rpy="0 0 0" />
+      <mass
+        value="0.00181277282792487" />
+      <inertia
+        ixx="1.24760361831459E-07"
+        ixy="1.41117961420783E-24"
+        ixz="-2.29625984279574E-21"
+        iyy="1.21137686552032E-07"
+        iyz="-6.67760288250939E-23"
+        izz="2.16724299242668E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/mf-s2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/mf-s2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf-s2"
+    type="continuous">
+    <origin
+      xyz="0 0 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="mf-s1" />
+    <child
+      link="mf-s2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="mf-s3">
+    <inertial>
+      <origin
+        xyz="-7.35388208383814E-08 -0.00016385873738789 0.00823936637819031"
+        rpy="0 0 0" />
+      <mass
+        value="0.00125733690505109" />
+      <inertia
+        ixx="5.04557824415712E-08"
+        ixy="3.16853906665117E-13"
+        ixz="2.43300425245568E-13"
+        iyy="5.37916806912445E-08"
+        iyz="4.80470864067166E-10"
+        izz="2.17253810006459E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/mf-s3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/mf-s3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf-s3"
+    type="continuous">
+    <origin
+      xyz="0 0 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="mf-s2" />
+    <child
+      link="mf-s3" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="rf-pf">
+    <inertial>
+      <origin
+        xyz="-0.0102295976802924 3.35861206901544E-10 -0.000813337817233792"
+        rpy="0 0 0" />
+      <mass
+        value="0.00348118991978439" />
+      <inertia
+        ixx="1.36456953375965E-07"
+        ixy="-1.22095432343902E-14"
+        ixz="-6.08645983537688E-08"
+        iyy="2.80536933052879E-07"
+        iyz="-3.29458309041941E-15"
+        izz="2.70184388863249E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/rf-pf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/rf-pf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf-pf-mount"
+    type="continuous">
+    <origin
+      xyz="0.020503 -0.11847 0.093709"
+      rpy="0 -0.0032256 1.5708" />
+    <parent
+      link="palm" />
+    <child
+      link="rf-pf" />
+    <axis
+      xyz="0.86603 0 0.5" />
+  </joint>
+  <link
+    name="rf">
+    <inertial>
+      <origin
+        xyz="1.67921232474555E-15 3.55618312575245E-15 -0.00410030127828195"
+        rpy="0 0 0" />
+      <mass
+        value="0.00192127930221582" />
+      <inertia
+        ixx="9.39940947687055E-08"
+        ixy="-7.31368011878956E-23"
+        ixz="1.71312129987118E-22"
+        iyy="7.41983872586434E-08"
+        iyz="2.14736680682619E-24"
+        izz="3.96461361618716E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/rf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf-base"
+    type="continuous">
+    <origin
+      xyz="-0.00412806613458681 0 0.00747927329036563"
+      rpy="-3.14159265358979 -0.0032256273938393 3.14159265358979" />
+    <parent
+      link="rf-pf" />
+    <child
+      link="rf" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rf-s1">
+    <inertial>
+      <origin
+        xyz="-9.71445146547012E-16 1.36349265211777E-15 -0.0100000000000005"
+        rpy="0 0 0" />
+      <mass
+        value="0.00141557768550297" />
+      <inertia
+        ixx="8.38059118781398E-08"
+        ixy="8.59368567342656E-25"
+        ixz="1.6882885549178E-22"
+        iyy="8.96433788186837E-08"
+        iyz="-4.59422869732838E-22"
+        izz="2.98708462926756E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/rf-s1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/rf-s1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf-s1"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0122722944655053"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="rf" />
+    <child
+      link="rf-s1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="rf-s2">
+    <inertial>
+      <origin
+        xyz="-8.99426586514762E-07 -6.24500451351651E-17 -0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.00181277282792487" />
+      <inertia
+        ixx="1.24760361831459E-07"
+        ixy="3.2023592496779E-24"
+        ixz="3.28344031642669E-22"
+        iyy="1.21137686552032E-07"
+        iyz="-6.207997702058E-22"
+        izz="2.16724299242668E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/rf-s2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/rf-s2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf-s2"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0200000000000005"
+      rpy="0 0 0" />
+    <parent
+      link="rf-s1" />
+    <child
+      link="rf-s2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="rf-s3">
+    <inertial>
+      <origin
+        xyz="-7.38421874896256E-08 0.000163857846701972 -0.00823936350944071"
+        rpy="0 0 0" />
+      <mass
+        value="0.00125733648922937" />
+      <inertia
+        ixx="5.04557790777883E-08"
+        ixy="-3.19441837768146E-13"
+        ixz="-2.40414573330039E-13"
+        iyy="5.37916659519629E-08"
+        iyz="4.8044243973345E-10"
+        izz="2.17253936875594E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/rf-s3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.988235294117647 0.737254901960784 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/rf-s3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf-s3"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.02"
+      rpy="0 0 0" />
+    <parent
+      link="rf-s2" />
+    <child
+      link="rf-s3" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="pf">
+    <inertial>
+      <origin
+        xyz="3.1641356201817E-15 -1.49880108324396E-15 -0.00340790607707549"
+        rpy="0 0 0" />
+      <mass
+        value="0.00184923522928666" />
+      <inertia
+        ixx="7.78437464086745E-08"
+        ixy="-7.37718670211139E-23"
+        ixz="-3.96047830420451E-22"
+        iyy="5.67595045206384E-08"
+        iyz="4.47620543875295E-22"
+        izz="4.06344869026408E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/pf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/pf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pf-base"
+    type="continuous">
+    <origin
+      xyz="-0.0159563770643683 0 0.00497927329036527"
+      rpy="3.14159265358978 0.0032256273938393 0" />
+    <parent
+      link="rf-pf" />
+    <child
+      link="pf" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="pf-s1">
+    <inertial>
+      <origin
+        xyz="4.55191440096314E-15 7.18175519054398E-16 -0.00750000000000159"
+        rpy="0 0 0" />
+      <mass
+        value="0.00116557768550297" />
+      <inertia
+        ixx="4.98674510101309E-08"
+        ixy="3.89698413592785E-25"
+        ixz="1.30660609453567E-22"
+        iyy="5.41424179506748E-08"
+        iyz="-2.29982336069324E-22"
+        izz="2.41416796260088E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/pf-s1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/pf-s1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pf-s1"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0102033295274417"
+      rpy="0 0 0" />
+    <parent
+      link="pf" />
+    <child
+      link="pf-s1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="pf-s2">
+    <inertial>
+      <origin
+        xyz="-8.59616764020688E-07 -6.24500451351651E-17 -0.00849999999999998"
+        rpy="0 0 0" />
+      <mass
+        value="0.0015626580130373" />
+      <inertia
+        ixx="7.65931352485379E-08"
+        ixy="-1.50798699390763E-24"
+        ixz="2.16290934076286E-22"
+        iyy="7.45331988192324E-08"
+        iyz="-4.29300741230119E-22"
+        izz="1.90665885262618E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/pf-s2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/pf-s2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pf-s2"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0150000000000016"
+      rpy="0 0 0" />
+    <parent
+      link="pf-s1" />
+    <child
+      link="pf-s2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="pf-s3">
+    <inertial>
+      <origin
+        xyz="3.82842677004724E-09 0.000133107869008737 -0.00537557948404196"
+        rpy="0 0 0" />
+      <mass
+        value="0.000901883353735601" />
+      <inertia
+        ixx="2.50570129735904E-08"
+        ixy="-2.50556729105788E-13"
+        ixz="-2.55335189187708E-13"
+        iyy="2.7408985605713E-08"
+        iyz="-8.52736726874675E-12"
+        izz="1.52081227194E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/pf-s3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/pf-s3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pf-s3"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.017"
+      rpy="0 0 0" />
+    <parent
+      link="pf-s2" />
+    <child
+      link="pf-s3" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="thumb">
+    <inertial>
+      <origin
+        xyz="-0.00453783908612287 0.00793563558611362 -0.0163942884330579"
+        rpy="0 0 0" />
+      <mass
+        value="0.00594529324577442" />
+      <inertia
+        ixx="8.86370232927372E-07"
+        ixy="-1.55374020451378E-13"
+        ixz="-2.96132099153863E-07"
+        iyy="1.00529654720838E-06"
+        iyz="6.07081072961038E-13"
+        izz="3.32211780420031E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/thumb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/thumb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="t-mount"
+    type="continuous">
+    <origin
+      xyz="0.0125674374960782 -0.0853902893283103 0.0324518274728524"
+      rpy="3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="palm" />
+    <child
+      link="thumb" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="t">
+    <inertial>
+      <origin
+        xyz="3.81639164714898E-17 -0.00773740230601318 0.0159459790886963"
+        rpy="0 0 0" />
+      <mass
+        value="0.00235990243114354" />
+      <inertia
+        ixx="1.40640133496988E-07"
+        ixy="6.15397707343908E-23"
+        ixz="-1.51110256593602E-22"
+        iyy="1.24238525679483E-07"
+        iyz="3.75173867490251E-08"
+        izz="5.93477583961018E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/t.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/t.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="t-base"
+    type="continuous">
+    <origin
+      xyz="0.00262934553941836 0.00793562857847081 -0.0109566905206542"
+      rpy="2.92823885802745 0 -1.5707963267949" />
+    <parent
+      link="thumb" />
+    <child
+      link="t" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="t-s1">
+    <inertial>
+      <origin
+        xyz="-0.00537227943996287 -7.46442227472777E-10 0.00998361243657422"
+        rpy="0 0 0" />
+      <mass
+        value="0.00139269825002257" />
+      <inertia
+        ixx="7.81677622263735E-08"
+        ixy="3.8983852292582E-15"
+        ixz="2.84056609479432E-14"
+        iyy="7.89858757835289E-08"
+        iyz="8.91679987840875E-15"
+        izz="2.23935135472548E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/t-s1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/t-s1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="t-s1"
+    type="continuous">
+    <origin
+      xyz="0 -0.00643687267470444 0.0268358649075685"
+      rpy="0 -0.226892802759256 1.5707963267949" />
+    <parent
+      link="t" />
+    <child
+      link="t-s1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="t-s2">
+    <inertial>
+      <origin
+        xyz="0.0053722538040647 -0.000270217252244517 0.0109026458949657"
+        rpy="0 0 0" />
+      <mass
+        value="0.00169894674805315" />
+      <inertia
+        ixx="9.12566882483057E-08"
+        ixy="-2.16023739958426E-13"
+        ixz="1.50449435359982E-14"
+        iyy="9.53053699077468E-08"
+        iyz="1.47159030425373E-09"
+        izz="2.83745849045788E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/t-s2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/t-s2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="t-s2"
+    type="continuous">
+    <origin
+      xyz="0 0 0.0175"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="t-s1" />
+    <child
+      link="t-s2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
+
+<robot
+  name="Example Sphere">
+  <link
+    name="Example Sphere">
+    <inertial>
+      <origin
+        xyz="9.1849E-19 0.04 -2.44921270764475E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.26808" />
+      <inertia
+        ixx="0.00017157"
+        ixy="0"
+        ixz="0"
+        iyy="0.00017157"
+        iyz="0"
+        izz="0.00017157" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/Example Sphere.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+        <texture
+          filename="package://Example Sphere/textures/" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hand-Assem-By-Part-URDF.SLDASM/meshes/Example Sphere.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
